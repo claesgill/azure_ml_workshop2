@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+env/
+terraform/
+../local/src/__pycache__/
+../local/model/src/__pycache__/
+../local/.azureml
+../local/.config/
+../local/outputs/
+../local/solution/.azureml
+../local/solution/model/src/__pycache__/
+../local/solution/outputs/
+../local/data/new_skatteetaten.txt
