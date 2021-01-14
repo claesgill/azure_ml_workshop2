@@ -1,3 +1,5 @@
+# HINT: https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.workspace.workspace?view=azure-ml-py
+
 # TODO: Import Workspace from azureml core
 from azureml.core import Workspace
 
