@@ -29,6 +29,8 @@ if dataset_name not in ws.datasets.keys():
 
         # TODO: Use the .register method on 'shakespeare_data' object to register your dataset to Azure ML
         # The name and description should be the 'dataset_name' and 'dataset_description' you provided in the last todo
+        # HINT:
+        #   https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#register-datasets
         shakespeare_data.register(workspace=ws,
                                   name=dataset_name,
                                   description=dataset_desciption,

@@ -1,6 +1,6 @@
 azureml-core
 azureml-dataprep
-azureml-train
+azureml-train-core
 pandas
 torch
 torchvision

@@ -2,7 +2,7 @@ import azureml.core
 from azureml.core import Workspace, ComputeTarget, Datastore, Dataset
 
 
-# TODO: Load the workspace using the from_config method
+# TODO: Load the Workspace using the from_config method
 ws = 
 
 # Print Azure ML SDK version and workspace name
@@ -29,7 +29,8 @@ if dataset_name not in ws.datasets.keys():
 
         # TODO: Use the .register method on 'shakespeare_data' object to register your dataset to Azure ML
         # The name and description should be the 'dataset_name' and 'dataset_description' you provided in the last todo
-
+        # HINT:
+        #   https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets#register-datasets
 
 
 

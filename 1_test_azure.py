@@ -4,7 +4,7 @@ from azureml.core import ComputeTarget, Datastore, Dataset
 
 
 # Load the workspace
-ws = Workspace.get(name="") # TODO: Fill inn your workspace name
+ws = Workspace() # TODO: Fill in your workspace
 
 # Print Azure ML SDK version and workspace name
 print("Ready to use Azure ML '{}' to work with '{}'.".format(azureml.core.VERSION, ws.name))

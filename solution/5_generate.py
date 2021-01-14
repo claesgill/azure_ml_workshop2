@@ -22,7 +22,9 @@ args = argparser.parse_args()
 all_characters = string.printable
 n_characters = len(all_characters)
 
-# TODO: Use the Model class to download your trained model
+# TODO: Use the Model class and the 'download' method to download your trained model
+# HINT:
+#   https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.model.model?view=azure-ml-py#methods
 model = Model(workspace=ws, name=args.modelname)
 model = model.download(target_dir='.', exist_ok=True)
 

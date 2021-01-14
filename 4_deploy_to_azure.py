@@ -14,7 +14,7 @@ estimator = Estimator(
     script_params={
         "--dataset": "",   # TODO: Specify the same dataset_name you provided earlier 
         "--modelname": "", # TODO: Specify your modelname
-        "--n_epochs": 500
+        "--n_epochs": 0    # TODO: Set number of epochs (int)
         },
     compute_target="", # TODO: Specify your compute target
     pip_packages=[
@@ -29,9 +29,10 @@ estimator = Estimator(
     ]
 )
 
-# TODO: Create a "Experiment" and use the submit method to submit the "estimator" object
-# Recieve the return object of the submittet experiment and use the "wait_for_completion(show_output=True)" method.
+# TODO: Create a "Experiment" and use the 'submit' method to submit the 'estimator' object
+# Recieve the return object of the submittet experiment and use the 'wait_for_completion(show_output=True)' method.
 # This will show you the logs for the submitted experiment
-
+# HINT:
+#   https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.experiment.experiment?view=azure-ml-py
 
 

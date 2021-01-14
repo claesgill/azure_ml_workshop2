@@ -14,9 +14,9 @@ estimator = Estimator(
     script_params={
         "--dataset": "shakespeare",         # TODO: Specify the same dataset_name you provided earlier 
         "--modelname": "shakespeare_model", # TODO: Specify your modelname
-        "--n_epochs": 2000
+        "--n_epochs": 2000                  # TODO: Set number of epochs
         },
-    compute_target="az-workshop-ci", # TODO: Specify your compute target
+    compute_target="ci-claes", # TODO: Specify your compute target
     pip_packages=[
         "azureml-core",
         "azureml-dataprep",
@@ -29,9 +29,11 @@ estimator = Estimator(
     ]
 )
 
-# TODO: Create a "Experiment" and use the submit method to submit the "estimator" object
-# Recieve the return object of the submittet experiment and use the "wait_for_completion(show_output=True)" method.
+# TODO: Create a "Experiment" and use the 'submit' method to submit the 'estimator' object
+# Recieve the return object of the submittet experiment and use the 'wait_for_completion(show_output=True)' method.
 # This will show you the logs for the submitted experiment
+# HINT:
+#   https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.experiment.experiment?view=azure-ml-py
 experiment = Experiment(workspace=ws, name="demo-skatteetaten-dataset")
 run = experiment.submit(config=estimator)
 run.wait_for_completion(show_output=True)

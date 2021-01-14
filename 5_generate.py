@@ -12,7 +12,7 @@ ws = Workspace.from_config()
 
 # Parse command line arguments
 argparser = argparse.ArgumentParser()
-argparser.add_argument("--modelname",         type=str,   default="char_rnn_model")
+argparser.add_argument("--modelname",         type=str,   default="shakespeare_model")
 argparser.add_argument("-p", "--prime_str",   type=str,   default="A")
 argparser.add_argument("-l", "--predict_len", type=int,   default=100)
 argparser.add_argument("-t", "--temperature", type=float, default=0.8)
@@ -22,7 +22,9 @@ args = argparser.parse_args()
 all_characters = string.printable
 n_characters = len(all_characters)
 
-# TODO: Use the Model class to download your trained model
+# TODO: Use the Model class and the 'download' method to download your trained model
+# HINT:
+#   https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.model.model?view=azure-ml-py#methods
 
 
 

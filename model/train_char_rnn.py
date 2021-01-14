@@ -32,13 +32,17 @@ argparser.add_argument('--cuda',          action='store_true')
 args = argparser.parse_args()
 
 
-# TODO: Download the dataset you uploaded earlier by using the Dataset class
-# Use the recieved file_path as input to the "read_file()" function.
-# NB! The filepath is a list and read_file expect a string
+# TODO: Download the dataset you uploaded earlier by using
+# the Dataset class using the 'get_by_name' and 'download' methods.
+# Use the recieved file_path as input to the 'read_file()' function.
+# HINT: 
+#   In the 'get_by_name' method the name input-field should be 'name=args.dataset'
+#   The filepath is a list and 'read_file' expect a string
+#   https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.dataset.dataset?view=azure-ml-py
 
 
 
-file, file_len = read_file() # <-- Input the file path
+file, file_len = read_file() # TODO: Input the file path here
 
 
 # Splitting dataset function
@@ -107,7 +111,9 @@ for epoch in tqdm(range(1, args.n_epochs + 1)):
 save_filename = "outputs/" + args.modelname + ".pt"
 torch.save(decoder.state_dict(), save_filename)
 
-# TODO: Use the Model class and the register method to upload the model to Azure ML
+# TODO: Use the Model class and the 'register' method to upload the model to Azure ML
+# HINT:
+#   https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.model.model?view=azure-ml-py
 
 
 
