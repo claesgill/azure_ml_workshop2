@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GREEN="\e[92m"
-YELLOW="\e[93m"
+YELLOW="\e[33m"
 RED="\e[91m"
 NORMAL="\e[0m"
 SUCCSESS="$GREEN Success! $NORMAL"
