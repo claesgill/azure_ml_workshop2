@@ -31,7 +31,16 @@ sudo apt install python3-pip && echo -e $SUCCSESS || echo -e $FAIL
 
 # Install Python requirements
 echo -e "$YELLOW Installing Python requirements $NORMAL"
-pip3 install -r requirements.txt && echo -e $SUCCSESS || echo -e $FAIL
+#pip3 install -r requirements.txt && echo -e $SUCCSESS || echo -e $FAIL
+pip3 install azureml-core && echo -e $SUCCSESS || echo -e $FAIL
+pip3 install azureml-dataprep && echo -e $SUCCSESS || echo -e $FAIL
+# pip3 install azureml-train
+pip3 install azureml-train-core && echo -e $SUCCSESS || echo -e $FAIL
+pip3 install pandas && echo -e $SUCCSESS || echo -e $FAIL
+pip3 install torch && echo -e $SUCCSESS || echo -e $FAIL
+pip3 install torchvision && echo -e $SUCCSESS || echo -e $FAIL
+pip3 install tqdm && echo -e $SUCCSESS || echo -e $FAIL
+pip3 install Unidecode && echo -e $SUCCSESS || echo -e $FAIL
 
 echo -e "$YELLOW Trying to install VS Code $NORMAL"
 if command -v code > /dev/null 2>&1; then
