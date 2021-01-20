@@ -32,15 +32,23 @@ sudo apt install python3-pip && echo -e $SUCCSESS || echo -e $FAIL
 # Install Python requirements
 echo -e "$YELLOW Installing Python requirements $NORMAL"
 #pip3 install -r requirements.txt && echo -e $SUCCSESS || echo -e $FAIL
-pip3 install azureml-core && echo -e $SUCCSESS || echo -e $FAIL
-pip3 install azureml-dataprep && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install azureml-core $NORMAL"
+pip3 install azureml-core > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install azureml-dataprep $NORMAL"
+pip3 install azureml-dataprep > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
 # pip3 install azureml-train
-pip3 install azureml-train-core && echo -e $SUCCSESS || echo -e $FAIL
-pip3 install pandas && echo -e $SUCCSESS || echo -e $FAIL
-pip3 install torch && echo -e $SUCCSESS || echo -e $FAIL
-pip3 install torchvision && echo -e $SUCCSESS || echo -e $FAIL
-pip3 install tqdm && echo -e $SUCCSESS || echo -e $FAIL
-pip3 install Unidecode && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install azureml-train-core $NORMAL"
+pip3 install azureml-train-core > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install pandas $NORMAL"
+pip3 install pandas > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install torch $NORMAL"
+pip3 install torch > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install torchvision $NORMAL"
+pip3 install torchvision > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install tqdm $NORMAL"
+pip3 install tqdm > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
+echo -e "$YELLOW pip3 install Unidecode $NORMAL"
+pip3 install Unidecode > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
 
 echo -e "$YELLOW Trying to install VS Code $NORMAL"
 if command -v code > /dev/null 2>&1; then
