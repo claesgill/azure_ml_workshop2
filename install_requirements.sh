@@ -29,6 +29,10 @@ fi
 echo -e "$YELLOW Installing pip3 $NORMAL"
 sudo apt install python3-pip && echo -e $SUCCSESS || echo -e $FAIL
 
+# Clean .locals folder: https://stackoverflow.com/a/55309683
+echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
+rm -rf ~/.local
+
 # Install Python requirements
 echo -e "$YELLOW Installing Python requirements $NORMAL"
 #pip3 install -r requirements.txt && echo -e $SUCCSESS || echo -e $FAIL
