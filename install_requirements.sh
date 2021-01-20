@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GREEN="\e[92m"
+GREEN="\e[32m"
 YELLOW="\e[33m"
 RED="\e[91m"
 NORMAL="\e[0m"
@@ -9,9 +9,9 @@ FAIL="$RED Failed ... $NORMAL"
 
 echo -e "$YELLOW Trying to install Azure CLI! $NORMAL"
 if command -v az > /dev/null 2>&1; then
-  echo -e "$YELLOW az CLI exists! Skipping installation. $NORMAL"
+  echo -e "$GREEN az CLI exists! Skipping installation. $NORMAL"
 else
-    echo -e "$YELLOW Installing Azure CLI$NORMAL"
+    echo -e "$YELLOW Installing Azure CLI $NORMAL"
     sudo apt-get update
     sudo apt-get install ca-certificates curl apt-transport-https lsb-release gnupg
     curl -sL https://packages.microsoft.com/keys/microsoft.asc |
@@ -30,7 +30,7 @@ echo -e "$YELLOW Installing pip3 $NORMAL"
 sudo apt install python3-pip && echo -e $SUCCSESS || echo -e $FAIL
 
 # Install Python requirements
-echo "Installing Python requirements"
+echo -e "$YELLOW Installing Python requirements $NORMAL"
 pip3 install -r requirements.txt && echo -e $SUCCSESS || echo -e $FAIL
 
 echo -e "$YELLOW Trying to install VS Code $NORMAL"
