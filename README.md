@@ -1,4 +1,6 @@
 # Work from local machine
+**:warning: This readme is a bit out of date :shrug:**
+
 In this task you will learn how you can work with Azure ML from your local machine using the Azure ML SDK library.
 
 The main goal is to learn about Azure ML and the Azure ML SDK, but if would like to know more about the machinelearning algorithm and what it does, read the [Char RNN](#char-rnn) section.
@@ -58,7 +60,6 @@ python3 --version
 ### Installation
 Copy and paste the following commands to install the requirements which includes all the packages you'll need for this workshop:  
 ```sh
-cd local/
 pip3 install -r requirements.txt
 ```
 
