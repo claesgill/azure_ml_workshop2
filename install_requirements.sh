@@ -88,12 +88,9 @@ pip3 install Unidecode > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
 echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
 rm -rf ~/.local
 
-echo -e "$YELLOW Trying to install VS Code $NORMAL"
-if command -v code > /dev/null 2>&1; then
-  echo -e "$GREEN VS Code exists! Skipping installation. $NORMAL"
-else
-  sudo snap install --classic code && echo -e $SUCCSESS || echo -e $FAIL
-fi
+echo -e "$YELLOW Installing VS Code $NORMAL"
+sudo snap install --classic code && echo -e $SUCCSESS || echo -e $FAIL
+
 
 # Install VS Code extentions
 #code --install-extension ms-python.python
