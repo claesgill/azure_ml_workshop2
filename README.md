@@ -43,10 +43,11 @@ Here are some literature if you would like to learn more:
 
 ## Requirements
 > :information_source: It is recomended to use a virtual envrionment for python, but it is not required.
-> :warning: Run `bash install_requirements.sh` if on a clean VDI.
+
+> :warning: Run `bash ./install_requirements.sh` if on a clean VDI.
 
 Before you start you need to check that you have the correct python version and all the packages you need.  
-* Python v3.6.9 or higher
+* Python >=3.5, < 3.9
 * pip3
 
 You can check your python version in the terminal:  
