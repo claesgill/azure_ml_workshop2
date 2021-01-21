@@ -39,57 +39,12 @@ fi
 echo -e "$YELLOW Installing pip3 $NORMAL"
 sudo apt -y install python3-pip && echo -e $SUCCSESS || echo -e $FAIL
 
-# Clean .locals folder: https://stackoverflow.com/a/55309683
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
 # Install Python requirements
 echo -e "$YELLOW Installing Python requirements $NORMAL"
-
-#pip3 install -r requirements.txt && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW pip3 install azureml-core $NORMAL"
-pip3 install azureml-core > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
-echo -e "$YELLOW pip3 install azureml-dataprep $NORMAL"
-pip3 install azureml-dataprep > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
-# pip3 install azureml-train
-echo -e "$YELLOW pip3 install azureml-train-core $NORMAL"
-pip3 install azureml-train-core > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
-echo -e "$YELLOW pip3 install pandas $NORMAL"
-pip3 install pandas > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
-echo -e "$YELLOW pip3 install torch $NORMAL"
-pip3 install torch > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
-echo -e "$YELLOW pip3 install torchvision $NORMAL"
-pip3 install torchvision > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
-echo -e "$YELLOW pip3 install tqdm $NORMAL"
-pip3 install tqdm > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
-
-echo -e "$YELLOW pip3 install Unidecode $NORMAL"
-pip3 install Unidecode > /dev/null && echo -e $SUCCSESS || echo -e $FAIL
-echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
-rm -rf ~/.local
+pip3 install -r requirements.txt
 
 echo -e "$YELLOW Installing VS Code $NORMAL"
-sudo snap install --classic code && echo -e $SUCCSESS || echo -e $FAIL
+sudo snap install --classic code && echo -e $SUCCSESS || echo -e $FAIL	  sudo snap install --classic code && echo -e $SUCCSESS || echo -e $FAIL
 
 
 # Install VS Code extentions
