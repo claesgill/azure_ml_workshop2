@@ -31,13 +31,13 @@ else
     echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |
         sudo tee /etc/apt/sources.list.d/azure-cli.list
     sudo apt-get update
-    sudo apt-get install azure-cli && echo -e $SUCCSESS || echo -e $FAIL
+    sudo apt-get -y install azure-cli && echo -e $SUCCSESS || echo -e $FAIL
     echo -e "$GREEN Done installing Azure CLI! $NORMAL"
 fi
 
 # Install pip3
 echo -e "$YELLOW Installing pip3 $NORMAL"
-sudo apt install python3-pip && echo -e $SUCCSESS || echo -e $FAIL
+sudo apt -y install python3-pip && echo -e $SUCCSESS || echo -e $FAIL
 
 # Clean .locals folder: https://stackoverflow.com/a/55309683
 echo -e "$YELLOW Cleaning '.locals' folder $NORMAL"
