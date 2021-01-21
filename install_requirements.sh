@@ -1,19 +1,21 @@
 #!/bin/bash
 
-# Install Gnome desktop
-#sudo apt-get -y update
-#sudo apt-get -y upgrade
-#sudo apt-get -y -q=2  install ubuntu-gnome-desktop gnome-tweaks gnome-shell-extensions
-#sudo apt-get -y -q=2  install xrdp
-#sudo adduser xrdp ssl-cert
-#sudo apt-get -y -q=2  install ca-certificates curl apt-transport-https lsb-release gnupg
-
+# Declaring helper variables
 GREEN="\e[32m"
 YELLOW="\e[33m"
 RED="\e[91m"
 NORMAL="\e[0m"
 SUCCSESS="$GREEN Success! $NORMAL"
 FAIL="$RED Failed ... $NORMAL"
+
+# Install Gnome desktop
+echo -e "$YELLOW Installing Gnome desktop! $NORMAL"
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y -q=2  install ubuntu-gnome-desktop gnome-tweaks gnome-shell-extensions
+sudo apt-get -y -q=2  install xrdp
+sudo adduser xrdp ssl-cert
+sudo apt-get -y -q=2  install ca-certificates curl apt-transport-https lsb-release gnupg
 
 echo -e "$YELLOW Trying to install Azure CLI! $NORMAL"
 if command -v az > /dev/null 2>&1; then
